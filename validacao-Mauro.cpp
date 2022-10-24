@@ -14,34 +14,30 @@ main()
 
     arqE.open("validacao.txt");
 
-    if(arqE.is_open())
+    if (arqE.is_open())
     {
 
-        while(getline(arqE,line))
+        while (getline(arqE, line))
         {
 
-            cout<<"\n"<<line;
-            if(isdigit(line[0]))
+            cout << " \n " << line;
+            if (isdigit(line[0]))
             {
-                cout<<"=> Erro" <<endl;
-
+                cout << " => Erro" << endl;
             }
             else if (isalpha(line[0]))
             {
-                cout<< "=> Aceito" <<endl;
+                cout << " => Aceito" << endl;
             }
 
-            else if(line[0] == '%')
+            else if (line[0] == '%')
             {
-                cout<< "=> Erro" <<endl;
+                cout << " => Erro" << endl;
             }
         }
-
     }
     else
     {
-
-        cout<<"O arquivo não foi aberto."<<endl;
+        cout << "O arquivo nï¿½o foi aberto." << endl;
     }
-
 }
